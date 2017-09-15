@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Examination</title>
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th {
+            height: 50px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th,
+        td {
+            text-align: center;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: aliceblue;
+        }
+        
+        th {
+            background-color: darkolivegreen;
+            color: cyan;
+        }
+        
+        button[type=button] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button[type=LoadData] {
+            width: 10%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 4px 0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <h1> USER LIST </h1>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <table style="width:100%">
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+                <tr *ngFor="let u of data.UserList">
+                    <td>{{u.Name}}</td>
+                    <td>{{u.Phone}}</td>
+                    <td>{{u.Email}}</td>
+                    <td>{{u.Address}}</td>
+                    <td><button type="button" class="btn btn-primary" (click)="RemoveUser(u.id)">REMOVE</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div>
+        <button type="LoadData" class="btn btn-primary" (click)="LoadData()">Load Data</button>
+    </div>
+
+</body>
+
+</html>

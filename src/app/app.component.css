@@ -1,0 +1,19 @@
+#link1 {
+    width: 10%;
+    background-color: green;
+    color: white;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#link2 {
+    width: 10%;
+    background-color: green;
+    color: white;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
